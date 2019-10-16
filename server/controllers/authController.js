@@ -26,7 +26,7 @@ function signout(req, res){
     let {session}=req;
 
     session.destroy();
-    res.sendStatus(200);
+    res.status(200).json(req.session);
 }
 function getUser(req, res){
     let {session}=req;
